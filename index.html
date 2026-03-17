@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site for Vibe Coders</title>
+    <meta
+      name="description"
+      content="바이브코더를 위한 사이트 모음집. 디자인 레퍼런스, 어워드, 쇼케이스 사이트를 빠르게 탐색할 수 있습니다."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="#top">
+            <span class="brand-mark">SV</span>
+            <span class="brand-copy">
+              <strong>Site for Vibe Coders</strong>
+              <span>분위기와 실행감을 동시에 챙기는 링크 북마크</span>
+            </span>
+          </a>
+          <div class="topbar-links">
+            <a href="#catalog">컬렉션</a>
+            <a href="#source">출처</a>
+          </div>
+        </nav>
+
+        <section class="hero-grid" id="top">
+          <div class="hero-copy">
+            <p class="eyebrow">Initial curation for vibe coders</p>
+            <h1>바이브코더가 바로 써먹을 사이트 모음집</h1>
+            <p class="hero-description">
+              `site-for-developers`의 카테고리형 큐레이션 방식을 참고해, 첫
+              묶음은 Threads 게시물에서 확인된 UI 레퍼런스 사이트들로 시작했습니다.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#catalog">사이트 둘러보기</a>
+              <a
+                class="button secondary"
+                href="https://www.threads.com/@jay_ai__/post/DL34yDsvKIS?xmt=AQF0T2GZuwvsaT8fi_vzK6Nd3Nno-NwawZCvPNscrEfpag"
+                target="_blank"
+                rel="noreferrer"
+              >
+                원본 스레드 보기
+              </a>
+            </div>
+
+            <dl class="hero-stats" aria-label="컬렉션 요약">
+              <div>
+                <dt>초기 사이트</dt>
+                <dd>4</dd>
+              </div>
+              <div>
+                <dt>현재 카테고리</dt>
+                <dd>1</dd>
+              </div>
+              <div>
+                <dt>큐레이션 방식</dt>
+                <dd>검색 + 필터</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="hero-panel" aria-label="큐레이션 포인트">
+            <div class="panel-card">
+              <span class="panel-label">첫 묶음</span>
+              <h2>UI 영감이 필요한 순간</h2>
+              <p>
+                랜딩 페이지 무드보드, 인터랙션 참고, 비주얼 방향성 탐색에 바로
+                쓸 수 있는 어워드/쇼케이스 사이트만 우선 담았습니다.
+              </p>
+            </div>
+
+            <div class="panel-note">
+              <span>Includes</span>
+              <ul>
+                <li>Godly</li>
+                <li>Awwwards</li>
+                <li>CSS Design Awards</li>
+                <li>The FWA</li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+      </header>
+
+      <main>
+        <section class="intro section">
+          <div class="section-heading">
+            <p class="eyebrow">Why this structure</p>
+            <h2>README 북마크 감성을 웹 탐색 경험으로 옮긴 첫 버전</h2>
+          </div>
+          <div class="intro-grid">
+            <article>
+              <h3>빠르게 훑기 좋게</h3>
+              <p>
+                카드 중심으로 바꾸고, 검색과 카테고리 필터를 넣어 필요한 순간
+                바로 찾을 수 있게 했습니다.
+              </p>
+            </article>
+            <article>
+              <h3>초기 데이터는 검증된 출처로</h3>
+              <p>
+                현재 목록은 요청하신 Threads 게시물에 포함된 사이트들만 우선
+                반영했습니다.
+              </p>
+            </article>
+            <article>
+              <h3>확장하기 쉽게</h3>
+              <p>
+                사이트 데이터는 자바스크립트 배열로 분리해 두어, 다음에 카테고리
+                단위로 계속 추가하기 쉽습니다.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="catalog section" id="catalog">
+          <div class="section-heading">
+            <p class="eyebrow">Catalog</p>
+            <h2>초기 큐레이션</h2>
+            <p>
+              검색창이나 카테고리 버튼으로 원하는 레퍼런스만 빠르게 골라볼 수
+              있습니다.
+            </p>
+          </div>
+
+          <div class="toolbar">
+            <label class="search" for="search-input">
+              <span>검색</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="사이트명, 설명, 태그로 검색"
+              />
+            </label>
+            <div class="filters" id="filter-group" aria-label="카테고리 필터"></div>
+          </div>
+
+          <div class="catalog-meta">
+            <p id="result-count">4개의 사이트</p>
+            <button class="reset-button" id="reset-button" type="button">
+              필터 초기화
+            </button>
+          </div>
+
+          <div class="card-grid" id="card-grid"></div>
+          <p class="empty-state" id="empty-state" hidden>
+            조건에 맞는 사이트가 없습니다. 검색어를 바꾸거나 필터를 초기화해보세요.
+          </p>
+        </section>
+
+        <section class="source section" id="source">
+          <div class="section-heading">
+            <p class="eyebrow">Source</p>
+            <h2>초기 구성 기준</h2>
+          </div>
+          <div class="source-grid">
+            <article class="source-card">
+              <span class="source-label">Reference repo</span>
+              <h3>site-for-developers</h3>
+              <p>
+                카테고리형 링크 큐레이션, 빠른 진입 구조, 확장 가능한 북마크 저장소
+                방식을 참고했습니다.
+              </p>
+              <a
+                href="https://github.com/currenjin/site-for-developers"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub 열기
+              </a>
+            </article>
+            <article class="source-card">
+              <span class="source-label">Initial dataset</span>
+              <h3>Threads 게시물</h3>
+              <p>
+                현재 들어간 사이트 목록은 요청하신 스레드 게시물에서 확인된 링크를
+                기준으로 구성했습니다.
+              </p>
+              <a
+                href="https://www.threads.com/@jay_ai__/post/DL34yDsvKIS?xmt=AQF0T2GZuwvsaT8fi_vzK6Nd3Nno-NwawZCvPNscrEfpag"
+                target="_blank"
+                rel="noreferrer"
+              >
+                게시물 열기
+              </a>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
