@@ -6,7 +6,7 @@
     <title>Site for Vibe Coders</title>
     <meta
       name="description"
-      content="바이브코더를 위한 사이트 모음집. 디자인 레퍼런스, 어워드, 쇼케이스 사이트를 빠르게 탐색할 수 있습니다."
+      content="바이브코더를 위한 사이트 모음집. UI 레퍼런스, 데이터 시각화, 컴포넌트 라이브러리, 애니메이션, 랜딩페이지 레퍼런스를 빠르게 탐색할 수 있습니다."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,8 +38,9 @@
             <p class="eyebrow">Initial curation for vibe coders</p>
             <h1>바이브코더가 바로 써먹을 사이트 모음집</h1>
             <p class="hero-description">
-              `site-for-developers`의 카테고리형 큐레이션 방식을 참고해, 첫
-              묶음은 Threads 게시물에서 확인된 UI 레퍼런스 사이트들로 시작했습니다.
+              `site-for-developers`의 카테고리형 큐레이션 방식을 참고해 UI
+              레퍼런스, 실무 패턴, 데이터 시각화, 창의적 코딩, 컴포넌트
+              라이브러리, 색상, 비주얼 효과까지 한 번에 훑을 수 있게 정리했습니다.
             </p>
 
             <div class="hero-actions">
@@ -57,11 +58,11 @@
             <dl class="hero-stats" aria-label="컬렉션 요약">
               <div>
                 <dt>초기 사이트</dt>
-                <dd>4</dd>
+                <dd id="site-count-stat">64</dd>
               </div>
               <div>
                 <dt>현재 카테고리</dt>
-                <dd>1</dd>
+                <dd id="category-count-stat">14</dd>
               </div>
               <div>
                 <dt>큐레이션 방식</dt>
@@ -73,20 +74,23 @@
           <aside class="hero-panel" aria-label="큐레이션 포인트">
             <div class="panel-card">
               <span class="panel-label">첫 묶음</span>
-              <h2>UI 영감이 필요한 순간</h2>
+              <h2>UI 영감부터 그래픽 실험까지</h2>
               <p>
-                랜딩 페이지 무드보드, 인터랙션 참고, 비주얼 방향성 탐색에 바로
-                쓸 수 있는 어워드/쇼케이스 사이트만 우선 담았습니다.
+                무드보드 탐색, 실서비스 UI 패턴, 온보딩 흐름, 랜딩페이지,
+                애니메이션 실험, 차트 레퍼런스, 디자인 시스템 연구 자료까지
+                바이브코더가 바로 참고할 수 있는 사이트를 먼저 담았습니다.
               </p>
             </div>
 
             <div class="panel-note">
               <span>Includes</span>
               <ul>
-                <li>Godly</li>
-                <li>Awwwards</li>
-                <li>CSS Design Awards</li>
-                <li>The FWA</li>
+                <li>Mobbin</li>
+                <li>Landingfolio</li>
+                <li>Observable Plot</li>
+                <li>Shadertoy</li>
+                <li>Storybook Showcase</li>
+                <li>Vanta.js</li>
               </ul>
             </div>
           </aside>
@@ -103,22 +107,22 @@
             <article>
               <h3>빠르게 훑기 좋게</h3>
               <p>
-                카드 중심으로 바꾸고, 검색과 카테고리 필터를 넣어 필요한 순간
-                바로 찾을 수 있게 했습니다.
+                카드 중심 구성과 검색, 카테고리 필터로 필요한 순간 바로 찾을 수
+                있게 했습니다.
               </p>
             </article>
             <article>
-              <h3>초기 데이터는 검증된 출처로</h3>
+              <h3>실무와 영감을 같이</h3>
               <p>
-                현재 목록은 요청하신 Threads 게시물에 포함된 사이트들만 우선
-                반영했습니다.
+                감성적인 쇼케이스만이 아니라 실서비스 패턴, 컴포넌트, 차트,
+                비주얼 효과 레퍼런스까지 함께 담았습니다.
               </p>
             </article>
             <article>
               <h3>확장하기 쉽게</h3>
               <p>
-                사이트 데이터는 자바스크립트 배열로 분리해 두어, 다음에 카테고리
-                단위로 계속 추가하기 쉽습니다.
+                사이트 데이터는 자바스크립트 배열로 분리해 다음 큐레이션도 쉽게
+                이어서 붙일 수 있게 해두었습니다.
               </p>
             </article>
           </div>
@@ -147,7 +151,7 @@
           </div>
 
           <div class="catalog-meta">
-            <p id="result-count">4개의 사이트</p>
+            <p id="result-count">64개의 사이트</p>
             <button class="reset-button" id="reset-button" type="button">
               필터 초기화
             </button>
@@ -169,8 +173,8 @@
               <span class="source-label">Reference repo</span>
               <h3>site-for-developers</h3>
               <p>
-                카테고리형 링크 큐레이션, 빠른 진입 구조, 확장 가능한 북마크 저장소
-                방식을 참고했습니다.
+                카테고리형 링크 큐레이션, 빠른 진입 구조, 확장 가능한 북마크
+                저장소 방식을 참고했습니다.
               </p>
               <a
                 href="https://github.com/currenjin/site-for-developers"
@@ -182,10 +186,11 @@
             </article>
             <article class="source-card">
               <span class="source-label">Initial dataset</span>
-              <h3>Threads 게시물</h3>
+              <h3>Threads 연속 게시물 기반 확장</h3>
               <p>
-                현재 들어간 사이트 목록은 요청하신 스레드 게시물에서 확인된 링크를
-                기준으로 구성했습니다.
+                초기 묶음은 요청하신 Threads 게시물과 이어서 전달해주신
+                `jay_ai__`의 2025년 7월 9일 게시물 사이트 목록을 기준으로
+                확장했습니다.
               </p>
               <a
                 href="https://www.threads.com/@jay_ai__/post/DL34yDsvKIS?xmt=AQF0T2GZuwvsaT8fi_vzK6Nd3Nno-NwawZCvPNscrEfpag"
